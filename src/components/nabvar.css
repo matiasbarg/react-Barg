@@ -1,0 +1,40 @@
+
+header .navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+header .navbar img{
+    padding: 0 20px;
+    max-width: 250px;
+    transition: all 0.4s;
+}
+
+header ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+header li{
+    margin-top: 15px;
+}
+
+header li a{
+    text-decoration: none;
+    list-style: none;
+    margin: 5px 15px;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 40px;
+    padding: 5px 10px;
+    transition: all 0.4s;
+}
+
+header li a:hover {
+    text-shadow: 1px 1px #fff;
+    color: #111;
+    background: #D99125;
+}
