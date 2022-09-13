@@ -1,21 +1,31 @@
 
 header .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
     margin: 10px 0;
+
 }
 
-header .navbar img{
-    padding: 0 20px;
+.App-logo{
+    padding: 20px 20px;
     max-width: 250px;
+    margin-left: 40px;
     transition: all 0.4s;
 }
+.App-logo:hover{
+    transform: scale(1.1);
+}
+
 
 header ul{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    align-items: center;
+    justify-content: space-between;
+
 }
 
 header li{
@@ -25,16 +35,38 @@ header li{
 header li a{
     text-decoration: none;
     list-style: none;
-    margin: 5px 15px;
-    color: #fff;
-    font-weight: 600;
+    margin-right: 50px;
+    color: rgb(73, 73, 73);
+    font-weight: 400;
+    font-size: 1.5rem;
     border-radius: 40px;
     padding: 5px 10px;
     transition: all 0.4s;
 }
 
 header li a:hover {
-    text-shadow: 1px 1px #fff;
+
     color: #111;
-    background: #D99125;
+    background: #979696;
+}
+
+.cartWidget{
+    padding: 10px;
+    font-size: 1rem;
+    margin: 30px 30px;
+    min-width: 60px;
+    transition: all 0.4s;
+}
+
+.cartWidget p{
+    font-weight: 600;
+    margin: 0;
+}
+
+.cartWidget:hover{
+    transform: scale(1.1);
+}
+.card-detail{
+    font-size: 1rem;
+    font-weight: 600;
 }
