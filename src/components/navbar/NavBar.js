@@ -1,7 +1,6 @@
 import "./nabvar.css";
 import CartWidget from "./CartWidjet"
-import ItemListContainer from "./ItemListContainer"
-import logo from "../logo.svg";
+import logo from "../../logo.svg";
 
 function Navbar() {
     return (

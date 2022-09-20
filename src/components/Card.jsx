@@ -1,4 +1,7 @@
 import React from "react";
+import ItemCount from "./itemCount";
+
+
 
 function Card(props) {
     return (
@@ -12,6 +15,7 @@ function Card(props) {
             <h4>$ {props.price}</h4>
         </div>
         <a href="#">Ver más</a>
+        <ItemCount stock={props.stock} initial={props.initial} />
     </div>
     )
 }
