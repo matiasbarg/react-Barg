@@ -1,5 +1,5 @@
 import React,  {useState} from "react";
-import './contador.css';
+import './itemcount.css';
 
 function ItemCount(props) {
 let [Count, setCount] = useState(props.initial);
@@ -13,7 +13,7 @@ function handleClickAdd(){
     }
 }
 function handleClickMinus(){
-    if (Count>0){
+    if (Count>props.initial){
     setCount(Count-1)
 }
 }

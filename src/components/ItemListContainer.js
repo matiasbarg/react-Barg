@@ -1,37 +1,43 @@
-import Card from "./Card"
-import Mini1 from "../mini1.jpg";
-import Mini2 from "../mini2.jpg";
-import Mini3 from "../mini3.jpg";
-import ItemCount from "./itemCount";
+import React, {useState, useEffect} from "react";
+import getItems from "./mockAPI";
+import Item from "./Item"
 
-function ItemListContainer() {
+
+
+
+function ItemListContainer(){
+    let [data, setData] = useState([]);
+
+useEffect(
+    () => {
+        getItems().then( (respuestaDatos) => {
+            setData(respuestaDatos);
+        });
+    },
+    []
+);
+
+
+
+
     return (
-    <div className="itemListContainer"> 
-    <Card 
-        title="Heroe 1" 
-        description="Pícaro Humano" 
-        price={800} 
-        img={Mini1}
-        stock={5}
-        initial={1} />
-    <Card 
-        title="Heroe 2" 
-        description="Guerrero Enano" 
-        price={700} 
-        img={Mini2} 
-        stock={2}
-        initial={1}/>
-    <Card 
-        title="Heroe 3" 
-        description="Bárbaro Semi-Orco" 
-        price={900} 
-        img={Mini3} 
-        stock={4}
-        initial={1} />
-
-    </div>
+        <div>
+            <div className="itemListContainer">
+                {data.map((item) => {
+                    return <Item
+                    key={item.id}
+                    id={item.id}
+                    title={item.title}
+                    price={item.price}
+                    stock={item.stock}
+                    category={item.category}
+                    detail={item.detail} 
+                    img={item.img}
+                    initial={item.initial}/>
+                    })}
+            </div>
+        </div>
     );
-
 }
 
 export default ItemListContainer;
