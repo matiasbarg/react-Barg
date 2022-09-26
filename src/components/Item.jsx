@@ -1,5 +1,5 @@
 import React from "react";
-import ItemCount from "./itemCount";
+//import ItemCount from "./itemCount";
 
 
 
@@ -16,7 +16,7 @@ function Item(props) {
             <h4>$ {price}</h4>
         </div>
         <a href="#">Ver más</a>
-        <ItemCount stock={stock} initial={initial} />
+        {/*<ItemCount stock={stock} initial={initial} />*/}
     </div>
     )
 }
