@@ -1,10 +1,14 @@
 import React from "react";
-//import ItemCount from "./itemCount";
-
+import { Link } from "react-router-dom";
 
 
 function Item(props) {
-    let {price, title, img, detail, stock, initial} = props;
+    let {price, title, img, detail, id} = props;
+    const urlDetalle = `/minis/${id}`
+
+
+
+
     return (
     <div className="Card">
         <div className="card-img">
@@ -15,8 +19,7 @@ function Item(props) {
             <p>{detail}</p>
             <h4>$ {price}</h4>
         </div>
-        <a href="#">Ver más</a>
-        {/*<ItemCount stock={stock} initial={initial} />*/}
+        <Link to={urlDetalle}>Ver más</Link>
     </div>
     )
 }

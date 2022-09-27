@@ -145,14 +145,34 @@ export default function getItems(){
     return new Promise(  (resolve, reject) =>{
         setTimeout( () =>{
             resolve(data)
-        }, 2000 )
+        }, 1000 )
     })
 }
 
-export function getSingleItem(){
+
+export function getItemsByCategory(cat){
+    return new Promise((resolve, reject) => {
+
+        let itemFind = data.filter((item) => {
+            return item.category === cat;
+        });
+        setTimeout( () =>{
+        console.log("encontramos:", itemFind)
+        if (itemFind) resolve(itemFind);
+        else reject(new Error("item no encontrado"));
+        }, 1000 )
+    });
+}
+
+
+export function getSingleItem(idItem){
     return new Promise(  (resolve, reject) =>{
         setTimeout( () =>{
-            resolve(data[2])
-        }, 2000 )
-    })
+            let itemFind = data.find((item) => {
+                return item.id === Number(idItem)
+            });
+            if (itemFind) resolve(itemFind);
+            else reject(new Error("item no encontrado"));
+            }, 1000 );
+    });
 }

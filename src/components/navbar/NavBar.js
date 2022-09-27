@@ -1,16 +1,18 @@
 import "./nabvar.css";
 import CartWidget from "./CartWidjet"
 import logo from "../../logo.svg";
+import { Link } from "react-router-dom";
+
 
 function Navbar() {
     return (
     <div className="navbar">    
-            <img src={logo} className="App-logo" alt="logo" />
-            <ul>
-            <li><a href="">Heroes</a></li>
-            <li><a href="">Enemigos</a></li>
-            <li><a href="">Terreno</a></li>
-            <li><a href="">Promociones</a></li>
+        <Link to="/"> <img src={logo} className="App-logo" alt="logo" /> </Link>
+        <ul>
+            <li><Link to="/categoria/heroes">Heroes</Link></li>
+            <li><Link to="/categoria/enemigos">Enemigos</Link></li>
+            <li><Link to="/categoria/terreno">Terreno</Link></li>
+            <li><Link to="/categoria/promociones">Promociones</Link></li>
         </ul>
         <CartWidget/>
     </div>
