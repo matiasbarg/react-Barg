@@ -14,21 +14,9 @@ useEffect(() => {
         }, [id]);
 
     return (
-        <div>
             <div className="itemDetail">
-                <ItemDetail
-                    key={data.id}
-                    id={data.id}
-                    title={data.title}
-                    price={data.price}
-                    stock={data.stock}
-                    category={data.category}
-                    detail={data.detail} 
-                    img={data.img}
-                    initial={data.initial}
-                />
+                <ItemDetail item={data}/>
             </div>
-        </div>
     );
 }
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Button from "./Button";
 
 function Item(props) {
     let {price, title, img, detail, id} = props;
@@ -19,7 +19,7 @@ function Item(props) {
             <p>{detail}</p>
             <h4>$ {price}</h4>
         </div>
-        <Link to={urlDetalle}>Ver más</Link>
+        <Link to={urlDetalle}><Button>Ver más</Button></Link>
     </div>
     )
 }
