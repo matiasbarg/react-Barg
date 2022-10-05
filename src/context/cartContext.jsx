@@ -24,7 +24,7 @@ function addItem(item, Count) {
 
     function getTotalItemsInCart() {
     let total = 0;
-    cart.forEach((item) => total = item.count);
+    cart.forEach((item) => total += item.count);
     console.log("items en carrito", total)
     return total
 
