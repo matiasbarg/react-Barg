@@ -1,16 +1,16 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import FlexWrapper from "./FlexWrapper";
 import ItemCount from "./itemCount";
 import { Link } from "react-router-dom";
 import Button from "./Button";
-
+import { cartCtx } from "../context/cartContext"
 
 function ItemDetail({item}) {
-
+const {addItem} = useContext(cartCtx)
 const [ showItemCount, setShowItemCount ] = useState(true);
 
     function AddToCart(Count) {
-    alert(`agregaste al carrito! ${Count}`);
+    addItem(item, Count);
     setShowItemCount(false);
     }
 

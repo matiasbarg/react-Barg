@@ -15,13 +15,13 @@ function ItemCount({ stock, onAddToCart }) {
     }
 
     return (
-    <div>
-        <div>
-        <Button color={"firebrick"} onClick={handleSubstract}>
+    <div className="ItemCount">
+        <div className="contador">
+        <Button onClick={handleSubstract}>
             -
         </Button>
         <span>{Count}</span>
-        <Button color="darkgreen" onClick={handleAdd}>
+        <Button onClick={handleAdd}>
             +
         </Button>
         </div>

@@ -1,20 +1,5 @@
-.contador{
+.ItemCount{
 width: 200px;
 height: 100px;
 margin:  20px auto;
-}
-
-.contador button{
-    padding: 10px;
-    margin: 10px;
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 14px;
-    border-radius: 40px;
-    border-style: none;
-    background-color: rgb(187, 187, 187);
-}
-
-.contador button:hover{
-    background-color: rgb(125, 125, 125);
 }
