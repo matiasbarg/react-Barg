@@ -32,7 +32,7 @@ useEffect(() => {
         <div className="spinner">
         <DotSpinner 
             size={100}
-            speed={0.3} 
+            speed={0.9} 
             color="black"
         
         /></div>}

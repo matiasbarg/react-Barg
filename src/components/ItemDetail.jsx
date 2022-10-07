@@ -19,7 +19,7 @@ const [ showItemCount, setShowItemCount ] = useState(true);
     <FlexWrapper rows={true}>
         {item.stock === 0 && <span className="stock">sin stock</span>}
         {item.offer === true && <span className="offer">oferta</span>}
-        <div className="main container">
+        <div className="main-container">
         <h1>{item.title}</h1>
         <img src={item.img} alt={item.title}/>
         <h2>{item.title}</h2>
