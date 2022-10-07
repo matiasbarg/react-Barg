@@ -1,4 +1,4 @@
-const data = [
+/*const data = [
     {
         id:1,
         title: "Pícaro Humano",
@@ -141,6 +141,8 @@ const data = [
     },
 ]
 
+
+/*
 export default function getItems(){
     return new Promise(  (resolve, reject) =>{
         setTimeout( () =>{
@@ -176,3 +178,4 @@ export function getSingleItem(idItem){
             }, 1000 );
     });
 }
+*/

@@ -56,11 +56,13 @@ header li a:hover {
     margin: 30px 30px;
     min-width: 60px;
     transition: all 0.4s;
+    text-decoration: none;
 }
 
 .cartWidget p{
     font-weight: 600;
     margin: 0;
+
 }
 
 .cartWidget:hover{
@@ -69,4 +71,10 @@ header li a:hover {
 .card-detail{
     font-size: 1rem;
     font-weight: 600;
+}
+
+.cartNumber{
+    padding: 0px 10px 5px 10px;
+    font-weight: 700;
+    border-radius: 50%;
 }

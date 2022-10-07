@@ -1,26 +1,45 @@
 import React, {useState, useEffect} from "react";
-import getItems from "./mockAPI";
-import {getItemsByCategory} from "./mockAPI"
+import {getItems, getItemsByCategory} from "../components/services/firestore";
+
 import Item from "./Item"
 import { useParams } from "react-router-dom";
+import { DotSpinner } from '@uiball/loaders'
+
 
 
 function ItemListContainer(){
     let [data, setData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+
     const { cat } = useParams([]);
 useEffect(
     () => {
+        setData([]);
+        setIsLoading(true);
         if (cat === undefined){
-            getItems().then((respuestaDatos) => setData(respuestaDatos));
-            console.log("categoria sin definir")
+            getItems()
+            .then((respuestaDatos) => setData(respuestaDatos))
+            .finally( () => setIsLoading(false))
         }
         else{
-            getItemsByCategory(cat).then((respuestaDatos) => setData(respuestaDatos));
-            console.log("categoria", cat)
+            getItemsByCategory(cat)
+            .then((respuestaDatos) => setData(respuestaDatos))
+            .finally( () => setIsLoading(false))
         }
         },[cat]);
+
         return (
         <div>
+            {
+                isLoading && 
+                <div className="spinner">
+                <DotSpinner 
+                size={100}
+                speed={0.3} 
+                color="black"
+                />
+                </div>
+            }
             <div className="itemList">
                 {data.map((item) => {
                     return (
@@ -34,6 +53,7 @@ useEffect(
                     detail={item.detail} 
                     img={item.img}
                     initial={item.initial}
+                    offer={item.offer}
                     />
                     );
                     })}

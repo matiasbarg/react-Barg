@@ -1,0 +1,33 @@
+
+.cartViewContainer{
+    width: 100%;
+    height: 100%;
+}
+
+.CartCard{
+    margin-top: 20px;
+    justify-content: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+}
+
+.CartCard img{
+    width: 100px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.CartCardDetail{
+    display: flex;
+    flex-direction: row;
+    flex-shrink: var(-12px);
+    margin: 20px;
+    align-items: center;
+}
+
+.CartCardDetail h4{
+    margin-right: 20px;
+}

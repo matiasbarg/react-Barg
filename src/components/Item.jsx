@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Button from "./Button";
 
 function Item(props) {
-    let {price, title, img, detail, id} = props;
+    let {price, title, img, detail, id, offer, stock} = props;
     const urlDetalle = `/minis/${id}`
 
 
@@ -11,6 +11,8 @@ function Item(props) {
 
     return (
     <div className="Card">
+    {stock === 0 && <div className="listStock">sin stock</div>}
+    {offer === true && <div className="listOffer">oferta</div>}
         <div className="card-img">
             <img src={img} alt="imagen card"></img>
         </div>
@@ -21,6 +23,7 @@ function Item(props) {
         </div>
         <Link to={urlDetalle}><Button>Ver más</Button></Link>
     </div>
+    
     )
 }
 

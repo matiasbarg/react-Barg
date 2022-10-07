@@ -2,10 +2,10 @@ import './App.css';
 import NavBar from './components/navbar/NavBar';
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
-
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-
 import CartContextProvider from './context/cartContext';
+/*import {firestore} from "./components/services/firestore"*/
+import CartView from './components/cartView/CartView';
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
                 <h1>Estás Perdido...</h1>
               }/>
               <Route path="/cart" element={
-                <h1>carrito</h1>
+                <CartView/>
               }/>
             </Routes>
     </div>

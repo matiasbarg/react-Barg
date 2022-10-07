@@ -14,6 +14,7 @@ function addItem(item, Count) {
         } else return itemMapeo;
     });
 
+
     setCart(newCart);
     } else {
     let newCart = cart.map((item) => item);
@@ -29,14 +30,30 @@ function addItem(item, Count) {
     return total
 
 }
+    function getTotalPrice() {
+    let totalPrice = 0;
+    cart.forEach((item) => totalPrice += item.count * item.price);
+    console.log("precio total de items del carrito", totalPrice)
+    return totalPrice
+
+}
 
 function isInCart(id) {
     let found = cart.some((item) => item.id === id);
     return found;
 }
 
+
+const emptyCart = () => {
+    return setCart([]);
+  };
+
+  function removeFromCart(id) {
+    return setCart(cart.filter(item => item.id !== id))
+}
+
 return (
-    <cartCtx.Provider value={{ cart, addItem, getTotalItemsInCart, isInCart }}>
+    <cartCtx.Provider value={{ cart, addItem, getTotalItemsInCart, isInCart, getTotalPrice, removeFromCart, emptyCart }}>
     {children}
     </cartCtx.Provider>
 );

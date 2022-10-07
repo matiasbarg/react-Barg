@@ -14,7 +14,8 @@ function Navbar() {
             <li><Link to="/categoria/terreno">Terreno</Link></li>
             <li><Link to="/categoria/promociones">Promociones</Link></li>
         </ul>
-        <CartWidget/>
+        <Link to="/cart"><CartWidget/></Link>
+        
     </div>
     );
 }
