@@ -4,7 +4,6 @@ import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import CartContextProvider from './context/cartContext';
-/*import {firestore} from "./components/services/firestore"*/
 import CartView from './components/cartView/CartView';
 
 function App() {

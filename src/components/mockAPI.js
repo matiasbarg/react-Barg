@@ -1,4 +1,4 @@
-const data = [
+/*const data = [
     {
         id:1,
         title: "Pícaro Humano",
@@ -91,7 +91,7 @@ const data = [
     },
     {
         id:10,
-        title: "Wargo",
+        title: "lobo",
         price: 800,
         stock: 5,
         category: "enemigos",
