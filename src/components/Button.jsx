@@ -1,10 +1,10 @@
 import React from "react";
 import "./button.css";
 
-function Button({onClick, children}) {
+function Button(props) {
 
 function handleClick() {
-    onClick();
+    props.onClick && props.onClick();
 }
 
 return (
@@ -12,7 +12,7 @@ return (
     onClick={handleClick}
     className="button"
     >
-    {children}
+    {props.children}
     </button>
 );
 }

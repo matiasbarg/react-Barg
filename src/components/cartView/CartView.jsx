@@ -5,15 +5,19 @@ import "./cartView.css"
 import { Link } from 'react-router-dom';
 import Button from '../Button';
 import FlexWrapper from "../../components/FlexWrapper"
+//import { createBuyOrder } from '../services/firestore';
+import CheckoutForm from '../checkoutform/CheckoutForm';
+
 
 export default function CartView() {
     const context = useContext(cartCtx);
     const {cart, emptyCart, getTotalPrice} = context;
 
+
     return (
         <FlexWrapper>
             {cart.length ?
-                <div className='cartViewContainer'>
+                <div className='cartViewContainer'> 
                     { cart.map (item => (
                     <CartCard
                         key={item.id}
@@ -28,7 +32,7 @@ export default function CartView() {
                         offer={item.offer}
                         count={item.count}
                     />))}
-                    <div>
+                    <div className='textTotal'>
                         <h3>Total Carrito: {getTotalPrice()}</h3>
                         <Button className="btnCart"
                                 onClick={() => {
@@ -39,7 +43,7 @@ export default function CartView() {
                         <Link to="/">
                             <Button>Seguir comprando</Button>
                         </Link>
-                        <Button>Finalizar Compra</Button>
+                        <CheckoutForm />
                     </div>
                 </div> : 
                 <div>

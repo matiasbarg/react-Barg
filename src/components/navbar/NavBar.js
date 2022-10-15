@@ -4,7 +4,7 @@ import logo from "../../logo.svg";
 import { Link } from "react-router-dom";
 
 
-function Navbar() {
+function BarraNav() {
     return (
     <div className="navbar">    
         <Link to="/"> <img src={logo} className="App-logo" alt="logo" /> </Link>
@@ -14,11 +14,11 @@ function Navbar() {
             <li><Link to="/categoria/terreno">Terreno</Link></li>
             <li><Link to="/categoria/promociones">Promociones</Link></li>
         </ul>
-        <Link to="/cart"><CartWidget/></Link>
+        <Link to="/cart" className="linkCart"><CartWidget/></Link>
         
     </div>
     );
 }
 
-export default Navbar;
+export default BarraNav;
 

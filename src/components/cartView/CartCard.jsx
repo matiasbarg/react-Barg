@@ -15,10 +15,10 @@ function CartCard(props) {
             <img src={img} alt="imagen CartCard" className='CartCardImg'></img>
         </div>
         <div className="CartCardDetail">
-            <h4>Producto: {title}</h4>
-            <h4>Precio unidad: ${price}</h4>
-            <h4>Cantidad: {count}</h4>
-            <h4>Precio parcial: ${count * price}</h4>
+            <h4>Producto:</h4> <span>{title}</span>
+            <h4>Precio unidad:</h4> <span>${price}</span>
+            <h4>Cantidad:</h4> <span>{count}</span>
+            <h4>Precio parcial:</h4> <span>${count * price}</span>
         </div>
         <Button onClick={() => removeFromCart(id)}>Quitar</Button>
     </div>

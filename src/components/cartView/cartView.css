@@ -1,17 +1,14 @@
 
-.cartViewContainer{
-    width: 100%;
-    height: 100%;
-}
 
 .CartCard{
     margin-top: 20px;
-    justify-content: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    text-align: center;
     box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+}
+
+.CartCard h4{
+    text-decoration: underline;
+
 }
 
 .CartCard img{
@@ -23,11 +20,36 @@
 .CartCardDetail{
     display: flex;
     flex-direction: row;
-    flex-shrink: var(-12px);
-    margin: 20px;
+    padding: 20px;
     align-items: center;
+}
+
+.CartCardDetail span{
+    color: darkblue;
+    margin-right: 15px;
+    font-weight: 700;
 }
 
 .CartCardDetail h4{
     margin-right: 20px;
 }
+
+h3{
+    text-align: center;
+}
+
+.textTotal{
+text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .CartCardDetail{
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+    }
+
+
+  }

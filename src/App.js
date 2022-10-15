@@ -1,18 +1,22 @@
 import './App.css';
-import NavBar from './components/navbar/NavBar';
+import BarraNav from './components/navbar/NavBar';
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import CartContextProvider from './context/cartContext';
 import CartView from './components/cartView/CartView';
+import Checkout from "./components/Checkout/Checkout.jsx";
+/*import { exportDataToFirestore } from './components/services/firestore';*/
 
 function App() {
+
   return (
     <CartContextProvider>
+    {/* <button onClick={exportDataToFirestore}>enviar datos</button>*/}
     <BrowserRouter>
     <div className="App">    
             <header>
-            <NavBar/>
+            <BarraNav/>
             </header>
             <Routes>
               <Route path="/" element={
@@ -24,6 +28,9 @@ function App() {
               <Route path="/minis/:id" element={
                 <ItemDetailContainer/>
               }/>
+              <Route path="/checkout/:orderid" element={
+              <Checkout />
+              } />
               <Route path="*" element={
                 <h1>Estás Perdido...</h1>
               }/>

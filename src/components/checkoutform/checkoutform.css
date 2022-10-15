@@ -1,0 +1,24 @@
+.form-container{
+    display: flex;
+justify-content: center;
+}
+
+.form-item{
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.form-item label{
+    margin-right: 10px;
+    display: block;
+
+}
+
+.form-item input{
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
