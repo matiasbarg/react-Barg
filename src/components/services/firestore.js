@@ -36,6 +36,7 @@ export async function getItems(){
 }
 
 
+
 export async function getSingleItem(idParams){
     try{
     const docRef = doc(firestore, "miniaturas", idParams);
@@ -341,5 +342,6 @@ export async function exportDataToFirestore(){
         console.log("doc creado", newDoc.id)
     }
 }
+
 
 export default firestore;
