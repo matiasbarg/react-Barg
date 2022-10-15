@@ -3,8 +3,8 @@ import {cartCtx} from "../../context/cartContext";
 import CartCard from "./CartCard.jsx";
 import "./cartView.css"
 import { Link } from 'react-router-dom';
-import Button from '../Button';
-import FlexWrapper from "../../components/FlexWrapper"
+import Button from "../button/Button"
+import FlexWrapper from "../flexwrapper/FlexWrapper"
 //import { createBuyOrder } from '../services/firestore';
 import CheckoutForm from '../checkoutform/CheckoutForm';
 
@@ -33,7 +33,7 @@ export default function CartView() {
                         count={item.count}
                     />))}
                     <div className='textTotal'>
-                        <h3>Total Carrito: {getTotalPrice()}</h3>
+                        <h3>Total Carrito: ${getTotalPrice()}</h3>
                         <Button className="btnCart"
                                 onClick={() => {
                                 emptyCart();
@@ -46,7 +46,7 @@ export default function CartView() {
                         <CheckoutForm />
                     </div>
                 </div> : 
-                <div>
+                <div className='carroVacio'>
                     <h2>Carrito Vacio</h2>
                     <Link to="/">
                         <Button>Volver a la tienda</Button>

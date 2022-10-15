@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import {getItems, getItemsByCategory} from "../components/services/firestore";
+import {getItems, getItemsByCategory} from "../services/firestore";
 
-import Item from "./Item"
+import Item from "../itemdetail/Item";
 import { useParams } from "react-router-dom";
 import { DotSpinner } from '@uiball/loaders'
 

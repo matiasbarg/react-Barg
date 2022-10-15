@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { cartCtx } from "../../context/cartContext"
 import { createBuyOrder } from "../services/firestore";
-import Button from "../Button";
+import Button from "../button/Button";
 import "../checkoutform/checkoutform.css"
 
 function CheckoutForm() {
@@ -78,7 +78,8 @@ function CheckoutForm() {
             required
           />
         </div>
-        <Button type="submit">Finalizar Compra</Button>
+        <div className="btnFinalizar"><Button type="submit">Finalizar Compra</Button>
+</div>
       </form>
     </div>
   );
