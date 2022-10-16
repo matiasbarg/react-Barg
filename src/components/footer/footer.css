@@ -1,0 +1,9 @@
+.footer{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    height: auto;
+    padding: 50px 100px;
+    background: darkgrey;
+  }

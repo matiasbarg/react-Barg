@@ -7,6 +7,8 @@ import CartContextProvider from './context/cartContext';
 import CartView from './components/cartView/CartView';
 import Checkout from "./components/Checkout/Checkout.jsx";
 /*import { exportDataToFirestore } from './components/services/firestore';*/
+import {Footer} from './components/footer/Footer';
+
 
 function App() {
 
@@ -15,6 +17,7 @@ function App() {
     {/* <button onClick={exportDataToFirestore}>enviar datos</button>*/}
     <BrowserRouter>
     <div className="App">    
+    <div className="content-wrap">
             <header>
             <BarraNav/>
             </header>
@@ -38,6 +41,8 @@ function App() {
                 <CartView/>
               }/>
             </Routes>
+            <Footer/>
+            </div>
     </div>
     </BrowserRouter>
     </CartContextProvider>

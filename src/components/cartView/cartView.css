@@ -17,7 +17,6 @@
 
 .CartCard img{
     width: 100px;
-
     margin-right: 20px;
 }
 
@@ -51,6 +50,7 @@ text-align: center;
 }
 .carroVacio{
     margin-top: 100px;
+    margin-bottom: 40vh;
 }
 
 .carroVacio h2{

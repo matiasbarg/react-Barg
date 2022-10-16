@@ -2,14 +2,19 @@
 
 .App {
   font-family: 'Playfair Display', serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
+
 
 .App-logo {
   height: 100px;
 }
 
 header {
-  box-sizing: border-box;
+
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -21,6 +26,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 80px;
 }
 
 .Card{
