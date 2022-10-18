@@ -1,4 +1,4 @@
-// Import the functions you need from the SDKs you need
+
 import { initializeApp } from "firebase/app";
 import {
     getFirestore, 
@@ -10,7 +10,7 @@ import {
     addDoc
 } from "firebase/firestore"
 
-// Your web app's Firebase configuration
+
 const firebaseConfig = {
 apiKey: "AIzaSyC79zDyfiya8DfLumV7abyKLJ1KJYlNYpU",
 authDomain: "reactbarg.firebaseapp.com",
@@ -20,7 +20,7 @@ messagingSenderId: "962789872883",
 appId: "1:962789872883:web:32a861c037e5197dd69386"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app);
 
@@ -70,7 +70,6 @@ return dataDocs;
 
 
 export async function createBuyOrder(orderData){
-    console.log(orderData);
     const miCollection = collection(firestore, "orders");
     let respuesta = await addDoc(miCollection, orderData);
     return respuesta.id;
@@ -338,8 +337,7 @@ export async function exportDataToFirestore(){
 
 
     for(let item of data){
-        const newDoc = await addDoc(miCollection, item);
-        console.log("doc creado", newDoc.id)
+        await addDoc(miCollection, item);
     }
 }
 

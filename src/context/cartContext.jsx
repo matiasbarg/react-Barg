@@ -26,14 +26,12 @@ function addItem(item, Count) {
     function getTotalItemsInCart() {
     let total = 0;
     cart.forEach((item) => total += item.count);
-    console.log("items en carrito", total)
     return total
 
 }
     function getTotalPrice() {
     let totalPrice = 0;
     cart.forEach((item) => totalPrice += item.count * item.price);
-    console.log("precio total de items del carrito", totalPrice)
     return totalPrice
 
 }

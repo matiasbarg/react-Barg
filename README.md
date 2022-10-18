@@ -12,6 +12,7 @@ Loader
 Cartwidget
 CartContext
 Cartview
-Firebase pero hay solo 3 documentos
+Firebase
+orders a firebase
 El css esta horrible y no es responsive 
 
