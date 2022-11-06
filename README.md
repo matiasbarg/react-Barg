@@ -4,7 +4,7 @@ El proyecto es un simulador de e-commerce de una tienda de miniaturas en resina 
 
 
 
-## Tecnologías Utilizadas
+## Tecnologías Utilizadasç
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
@@ -18,6 +18,8 @@ El proyecto es un simulador de e-commerce de una tienda de miniaturas en resina 
 
 
 ## 🔗 Deploy del sitio en Netlify
+
+[![deploy](https://img.shields.io/badge/Link-000?style=for-the-badge&logo=-fi&logoColor=white)](https://laforjaminiaturas.netlify.app/)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/feb4534b-f76c-4a74-826c-14e018b410f8/deploy-status)](https://app.netlify.com/sites/laforjaminiaturas/deploys)
 
