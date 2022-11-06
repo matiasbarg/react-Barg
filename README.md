@@ -4,7 +4,7 @@ El proyecto es un simulador de e-commerce de una tienda de miniaturas en resina 
 
 
 
-## Tecnologías Utilizadasç
+## Tecnologías Utilizadas
 
 ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
