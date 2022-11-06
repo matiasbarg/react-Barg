@@ -19,7 +19,7 @@ El proyecto es un simulador de e-commerce de una tienda de miniaturas en resina 
 
 ## 🔗 Deploy del sitio en Netlify
 
-[![portfolio](https://img.shields.io/badge/Link-000?style=for-the-badge&logo=-fi&logoColor=white)](https://tranquil-eclair-fc3f91.netlify.app/)
+[![portfolio](https://img.shields.io/badge/Link-000?style=for-the-badge&logo=-fi&logoColor=white)](https://laforjaminiaturas.netlify.app/)
 
 
 ## Desarrollador
